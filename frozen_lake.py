@@ -44,7 +44,7 @@ MAPS = {
     ],
 }
 
-#Generate random map
+#Generate random map:
 def generate_random_map(size=20, p=0.8):
     """Generates a random valid map (one that has a path from start to goal)
     :param size: size of each side of the grid
