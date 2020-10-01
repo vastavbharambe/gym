@@ -15,7 +15,7 @@ env = gym.make("FrozenLake-v0", desc=custom_map)
 action_space_size = env.action_space.n
 state_space_size = env.observation_space.n
 
-# initializa q
+# initializa q_table
 q_table = np.zeros((state_space_size, action_space_size))
 print(q_table)
 

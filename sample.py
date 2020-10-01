@@ -1,5 +1,5 @@
 def custom_data():
-    arr = [
+    array = [
         "FHHHHHFFFFFFFFFFHHHF",
         "FFFFFFFFHHFFFFFFFFFF",
         "FFFFFFFFHFFFFFFFFFFF",
@@ -22,4 +22,4 @@ def custom_data():
         "FFFFFFFFFFFFFFFFHHHH"
 
     ]
-    return arr
+    return array
