@@ -20,8 +20,8 @@ q_table = np.zeros((state_space_size, action_space_size))
 print(q_table)
 
 # Hyperparameter tuning
-num_episodes = 10000
-max_steps_per_episode = 100
+num_episodes = 20
+max_steps_per_episode = 15
 learning_rate = 0.1
 discount_rate = 0.99
 exploration_rate = 1
@@ -59,19 +59,19 @@ for episode in range(num_episodes):
 
 # Calculate and print the average reward per thousand episodes
 rewards_per_thousand_episodes = np.split(
-    np.array(rewards_all_episodes), num_episodes/1000)
-count = 1000
+    np.array(rewards_all_episodes), num_episodes/20)
+count = 20
 # Average Reward
 print("********Average reward per thousand episodes********\n")
 for r in rewards_per_thousand_episodes:
-    print(count, ": ", str(sum(r/1000)))
-    count += 1000
+    print(count, ": ", str(sum(r/20)))
+    count += 20
 
 # Print updated Q-table
 print("\n\n********Q-table********\n")
 print(q_table)
 # Working it in an environment
-for episode in range(3):
+for episode in range(num_episodes):
     state = env.reset()
     done = False
     print("*****EPISODE ", episode+1, "*****\n\n\n\n")
